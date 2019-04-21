@@ -1,0 +1,42 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+Assets/AssetStoreTools*
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.vs/TooLittleBall/v15/Server/sqlite3/storage.ide-wal
+.vs/TooLittleBall/v15/Server/sqlite3/storage.ide-shm
+.vs/TooLittleBall/v15/Server/sqlite3/storage.ide
+.vs/TooLittleBall/v15/Server/sqlite3/db.lock
+.vs/HardGame/v15/Server/sqlite3/db.lock
+.vs/HardGame/v15/Server/sqlite3/storage.ide
+.vs/HardGame/v15/Server/sqlite3/storage.ide-shm
+.vs/HardGame/v15/Server/sqlite3/storage.ide-wal
