@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     public GameObject endGame;
 
-
+    public Joystick joystick;
     public Transform startPoint;
 
     [SerializeField]
@@ -64,7 +64,8 @@ public class UIManager : MonoBehaviour
 
     public void EndGame()
     {
-        
+        StartCoroutine(DisableJoystick());
+        player.gameObject.SetActive(false);
         endGame.SetActive(true);
         yourTime.text = counterText.text;
     }
@@ -148,7 +149,14 @@ public class UIManager : MonoBehaviour
         player.transform.position = startPoint.position;
         STF.uiManager.game = true;
         player.SetActive(true);
+        joystick.gameObject.SetActive(true);
 
+    }
+
+    IEnumerator DisableJoystick()
+    {
+        yield return new WaitForSeconds(0.5f);
+        joystick.gameObject.SetActive(false);
     }
 
 

@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    public Joystick joystick;
+
 
     private void Update()
     {
@@ -15,28 +17,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetInputs()
     {
+
         Vector2 tmpPos = transform.position;
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            tmpPos.y += speed *Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            tmpPos.y -= speed * Time.deltaTime;
-        }
-        else if(Input.GetKey(KeyCode.A))
-        {
-            tmpPos.x -= speed * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            tmpPos.x += speed * Time.deltaTime;
-        }
+            tmpPos.y += speed *Time.deltaTime * joystick.Vertical;
+
+            tmpPos.x += speed *Time.deltaTime * joystick.Horizontal;
+        
 
         Vector3 tmp = new Vector3(tmpPos.x, tmpPos.y, -2);
         transform.position = tmp;
+
+        
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
